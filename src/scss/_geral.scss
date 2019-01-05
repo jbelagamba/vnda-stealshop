@@ -62,10 +62,10 @@ nav:not(.mm-menu)
 .header,
 .footer
 {
-	background: #777;
+	background: #fff;
 	font-size: 16px;
 	font-weight: bold;
-	color: #fff;
+	color: #000;
 	line-height: 40px;
 
 
@@ -88,7 +88,8 @@ nav:not(.mm-menu)
 	left: 0;
 }
 .header {
-
+    padding-top:5px;
+    height:50px;
     a{
         display: block;
         width: 28px;
@@ -103,13 +104,13 @@ nav:not(.mm-menu)
         {
             content: '';
             display: block;
-            background: #fff;
+            background: #000;
             height: 2px;
         }
     }
 
     span{
-        background: #fff;
+        background: #000;
         display: block;
         height: 2px;
         margin: 6px 0;
@@ -125,6 +126,10 @@ nav:not(.mm-menu)
   margin-right: auto;
   margin-left: auto;
 
+  @media (max-width: 767px) {
+    padding:0;
+  }
+
   @media (min-width: 768px) {
     width: 750px;
   }
@@ -136,64 +141,71 @@ nav:not(.mm-menu)
   }
 }
 
-/* Header Desktop */
-.main-header {
-    height: 65px;
-}
-
 #header-desktop {
+  height: 60px;
 
   .logo{
       float:left;
       padding:10px;
+      padding-left:0px;
       
       img {
         width: 320px;
       }
   }
 
-   
+  i.far {
+      font-size: 20px;
+  }
 
-    nav>ul>li{
-        float:left;
-        list-style:none;
-        padding:10px;
+  .icons {
+      cursor:pointer;
+      padding: 10px;
+      float: right;
+      display: flex;
+      width: 10%;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+  }
+
+  nav>ul>li{
+    float:left;
+    list-style:none;
+    padding:10px;
+  }
+
+  li.has-submenu {
+    position: relative;
+    font-size: 18px;
+    font-weight: lighter;
+    color: black;
+    cursor: pointer;
+
+    &:hover .submenu{
+      display:block;
     }
-    li.has-submenu {
-        font-size: 18px;
-        font-weight: lighter;
-        color: black;
-        cursor: pointer;
-    }
-    i.far {
-        font-size: 20px;
-    }
-    .icons {
-        cursor:pointer;
-        padding: 10px;
-        float: right;
-        display: flex;
-        width: 10%;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-    }
-    ul.submenu {
+  }
+
+  ul{
+    .submenu {
         display:none;
         position: absolute;
+        left:0px;
         list-style: none;
-        padding: 0;
-        background-color: rgba(0, 0, 0, 0.08);
+        padding: 0px;
+        padding-top: 10px;
+        padding-left: 10px;
+        background-color: rgba(#fff, 0.9);
         width: 190px;
+
+        li {
+          padding: 3px 0;
+          font-size: 16px;
+          text-transform: uppercase;
+        }
     }
-    ul.submenu li {
-        padding: 3px 0;
-        font-size: 16px;
-        text-transform: uppercase;
-    }
-    .has-menu:hover .submenu{
-        display:block;
-    }
+  }
 }
 
 /* Banner home */
@@ -204,21 +216,22 @@ nav:not(.mm-menu)
 
   @media (max-width: 768px) {
     background-image: url("../imagens/banner-mobile.jpg");
-    
+    background-size: cover;
+    background-position: center;
+    height: 300px;
   }
+
   @media (min-width: 992px) {
     background-image: url("../imagens/banner-home.jpg");
   }
-  @media (min-width: 1200px) {
-    background-image: url("../imagens/banner-home.jpg");
-  }
-
 }
 
 /*Destaques home*/
 
 .text-center {
     text-align: center;
+    width: 85%;
+    margin: auto;
 }
 .heading-section .title {
     font-size: 29px;
@@ -230,6 +243,39 @@ nav:not(.mm-menu)
     font-family: "Open Sans",sans-serif;
     font-size: 16px;
 }
+
+/*Banners destaques*/
+.banners-grid {
+  @media (min-width: 992px) {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+    }
+    @media (max-width: 991px) {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+  }
+}
+
+.box-banner-destaque {
+    @media (min-width: 992px) {
+    width: 30%;
+    }
+}
+
+.item-banner-destaque img {
+    max-height: 100%;
+    max-width: 100%;
+    &:hover {
+      border: solid 1px #fb377f;
+    }
+}
+
+
+
+
+
 
 /* Seletores de tela */
 
