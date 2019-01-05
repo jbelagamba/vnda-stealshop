@@ -250,6 +250,9 @@ nav:not(.mm-menu)
     text-align: center;
     width: 85%;
     margin: 90px auto 0;
+        @media (max-width: 768px) {
+                margin: 0 auto;
+        }
 }
 
 .heading-section {

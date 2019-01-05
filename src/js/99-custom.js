@@ -1,7 +1,10 @@
 $(document).ready(function(){
 
     /*Instancia Menu*/
-    $('nav#menu').mmenu();
+    $('nav#menu').mmenu({
+       "slidingSubmenus": false
+    });
+
 
     /*Instancia Slick para diferentes tamanhos de tela*/
     $('.slider-products').slick({
