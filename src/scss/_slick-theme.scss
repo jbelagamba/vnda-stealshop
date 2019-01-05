@@ -28,9 +28,10 @@
     display: block;
 
     width: 50px;
-        @media (max-width: 992px){
-            width: 130px;
-        }
+    @media (max-width: 992px){
+        width: 130px;
+    }
+
     height: 20px;
     padding: 0;
     -webkit-transform: translate(0, -50%);
@@ -82,7 +83,7 @@
 
 .slick-prev
 {
-    left: -25px;
+    left: 0px;
     z-index: 1000;
 }
 [dir='rtl'] .slick-prev
@@ -101,7 +102,7 @@
 
 .slick-next
 {
-    right: -25px;
+    right: 0px;
 }
 [dir='rtl'] .slick-next
 {
