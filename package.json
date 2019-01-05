@@ -1,0 +1,14 @@
+{
+  "name": "vnda-test",
+  "version": "1.0.0",
+  "description": "Teste para VNDA",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jqueline B. de Moraes",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.0"
+  }
+}
