@@ -136,24 +136,26 @@ nav:not(.mm-menu)
 }
 
 #header-desktop {
-   height: 60px;
-  .logo{
+    height: 60px;
+    background-color: white;
+    position: fixed;
+    top:0;
+    .logo{
       float:left;
       padding:10px;
-      padding-left:0px;
       
       img {
         width: 320px;
+        margin-top: 10px;
       }
-  }
+    }
 
-  i.far {
+    i.far {
       font-size: 20px;
-  }
+    }
 
   .icons {
       cursor:pointer;
-      padding: 10px;
       float: right;
       display: flex;
       width: 10%;
@@ -165,7 +167,7 @@ nav:not(.mm-menu)
   nav>ul>li{
     float:left;
     list-style:none;
-    padding:10px;
+    padding: 8px 10px 10px 10px;
   }
 
   li.has-submenu {
@@ -201,7 +203,7 @@ nav:not(.mm-menu)
   }
 }
 
-/* Container estilo Bootstrap */
+/* Container  */
 
 .container {
   padding-right: 15px;
@@ -228,7 +230,7 @@ nav:not(.mm-menu)
 
 .banner-home {
   height: 470px;
-  margin-bottom: 50px;
+  margin: 50px 0px;
 
   @media (max-width: 768px) {
     background-image: url("../imagens/banner-mobile.jpg");
@@ -247,7 +249,7 @@ nav:not(.mm-menu)
 .text-center {
     text-align: center;
     width: 85%;
-    margin: auto;
+    margin: 90px auto 0;
 }
 
 .heading-section {
@@ -307,6 +309,10 @@ nav:not(.mm-menu)
 }
 
 /* slider*/
+section#news {
+    margin-bottom: 10%;
+}
+
 .item-product {
     border: solid 1px transparent;
     margin: 0px 10px;
@@ -389,6 +395,9 @@ h4.price-product {
     display:none;
     @media (max-width: 992px){
         display:block;
+        position: fixed;
+        width: 100%;
+        top:0;
     }
 }
 
